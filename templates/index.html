@@ -94,7 +94,7 @@
   function InitThis() {
       ctx = document.getElementById('myCanvas').getContext("2d");
 
-      // Array de objetos con nombre e imagen
+      
       let letra = [
         { nombre: "bestia", img: "/static/bestia.jpeg" },
         { nombre: "neblina", img: "/static/niebla.jpeg" },
@@ -145,12 +145,12 @@
   }
 
   function clearArea() {
-      // Use the identity matrix while clearing the canvas
+      
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   }
 
-  //https://www.askingbox.com/tutorial/send-html5-canvas-as-image-to-server
+ 
   function prepareImg() {
      var canvas = document.getElementById('myCanvas');
      document.getElementById('myImage').value = canvas.toDataURL();
@@ -176,6 +176,8 @@
           <input id="myImage" name="myImage" type="hidden" value="">
           <input id="bt_upload" type="submit" value="Enviar">
         </form>
+        <br/>
+        <button onclick="window.location.href='https://web-production-d87c.up.railway.app';">predecir imagen</button>
     </div>
 </body>
 </html>
